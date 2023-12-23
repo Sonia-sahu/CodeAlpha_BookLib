@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import Header from "./components/header";
+// import BorrowHistory from "./components/borrowHistory"; 
+import Books from "./components/books";
+// Move this line up
+import Footer from "./components/footer";
+import ScrollToTop from "./components/scrolltotop";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <Books></Books>
+      {/* <BorrowHistory />  */}
+      <ScrollToTop></ScrollToTop>
+      <Footer></Footer>
     </div>
   );
-}
+};
 
 export default App;
